@@ -15,7 +15,7 @@ const app = (0, express_1.default)();
 // Configure CORS
 app.use((0, cors_1.default)({
     origin: function (origin, callback) {
-        const allowedOrigins = ['http://localhost:3000', 'http://192.168.0.197:3000'];
+        const allowedOrigins = ['https://www.fechzo.online','https://sml-nexgen-git-master-udhais-projects.vercel.app','https://sml-nexgen-n63mrtung-udhais-projects.vercel.app'];
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, true);
         }
