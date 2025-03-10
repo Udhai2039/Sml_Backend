@@ -15,13 +15,12 @@ const app = (0, express_1.default)();
 // Configure CORS
 app.use((0, cors_1.default)({
     origin: function (origin, callback) {
-       app.use(cors({
+       app.use(cors({  // <- Nested app.use(cors()) inside another cors config
     origin: function (origin, callback) {
         const allowedOrigins = [
             'https://www.fechzo.online',
             'https://sml-nexgen-git-master-udhais-projects.vercel.app',
             'https://sml-nexgen-n63mrtung-udhais-projects.vercel.app',
-            
         ];
         console.log('Request Origin:', origin); // Log the origin
         if (!origin || allowedOrigins.includes(origin)) {
